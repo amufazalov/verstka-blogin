@@ -141,7 +141,25 @@ main{
 
 	article > header{
 		margin: 0 0 10px;
+		position: relative;
 	}
+
+	.publish{
+		font-size: 13px;
+		background: rgba(0,0,0,0.6);
+		color: #fff;
+		position: absolute;
+		bottom: 5px;
+		padding: 10px 20px;
+		width: 100%;
+		display:none;
+		box-sizing: border-box;
+	}
+
+	article > header:hover .publish{
+		display:block
+	}
+
 	article > h2{
 		font-size: 1.75em;
 		font-weight: 600;
@@ -150,6 +168,7 @@ main{
 		margin: 0 0 40px 20px;
 		color: #4f4e4e
 	}
+
 	article > p{
 		margin:0 0 20px 20px;
 		line-height: 1.4
@@ -159,7 +178,12 @@ main{
 		color: #c2c2c2;
 		padding: 7px 20px;
 		display: inline-block;
-		border-radius: 20px
+		border-radius: 20px;
+		text-decoration: none;
+		-webkit-transition: all 0.1s linear;
+		-moz-transition: all 0.1s linear;
+		-o-transition: all 0.1s linear;
+		transition: all 0.2s linear /* Плавность */
 	}
 	a:hover.more{
 		color:#339933;
